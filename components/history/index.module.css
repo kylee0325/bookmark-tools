@@ -1,0 +1,20 @@
+.history-item {
+    padding: 8px !important;
+    border-radius: 8px;
+}
+
+.history-item:hover {
+    background-color: var(--ant-table-header-bg, #fafafa);
+}
+
+.history-item-icon {
+    display: none;
+}
+
+.history-item:hover .history-item-extra {
+    display: none;
+}
+
+.history-item:hover .history-item-icon {
+    display: block;
+}

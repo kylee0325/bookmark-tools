@@ -1,0 +1,22 @@
+{
+    "extensionName": {
+        "message": "书签管理",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "书签管理工具",
+        "description": "Description of the extension."
+    },
+    "historyName": {
+        "message": "历史记录",
+        "description": "Browse history message."
+    },
+    "bookmarkName": {
+        "message": "书签管理",
+        "description": "Bookmark message."
+    },
+    "loadingMore": {
+        "message": "加载更多",
+        "description": "Loading more message."
+    }
+}

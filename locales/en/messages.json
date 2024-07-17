@@ -1,0 +1,22 @@
+{
+    "extensionName": {
+        "message": "Bookmark tools",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "A bookmark tools extension.",
+        "description": "Description of the extension."
+    },
+    "historyName": {
+        "message": "History",
+        "description": "Browse history message."
+    },
+    "bookmarkName": {
+        "message": "Bookmark",
+        "description": "Bookmark message."
+    },
+    "loadingMore": {
+        "message": "loading more",
+        "description": "Loading more message."
+    }
+}
