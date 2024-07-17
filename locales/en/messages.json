@@ -18,5 +18,9 @@
     "loadingMore": {
         "message": "loading more",
         "description": "Loading more message."
+    },
+    "searchPlaceholder": {
+        "message": "search",
+        "description": "Search placeholder message."
     }
 }

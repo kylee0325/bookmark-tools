@@ -14,22 +14,22 @@ interface HistoryItem extends Partial<chrome.history.HistoryItem> {
     time?: string;
 }
 
-const count = 10;
+const count = 20;
 
-const History: React.FC = () => {
+const History: React.FC<{ keyword?: string }> = (props) => {
     const [initLoading, setInitLoading] = useState(true);
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState<HistoryItem[]>([]);
     const [list, setList] = useState<HistoryItem[]>([]);
 
-    const getList = async () => {
+    const getList = async (init?: boolean) => {
         const last = list[list.length - 1];
 
         const params = {
-            text: "",
+            text: props.keyword || "",
             maxResults: count,
             startTime: dayjs().subtract(1, "year").valueOf(),
-            endTime: last ? last.lastVisitTime : dayjs().valueOf(),
+            endTime: !init && last ? last.lastVisitTime : dayjs().valueOf(),
         };
 
         const res = await chrome.history.search(params);
@@ -55,11 +55,14 @@ const History: React.FC = () => {
     };
 
     useEffect(() => {
-        getList().then((res) => {
+        setInitLoading(true);
+        setHistory([]);
+
+        getList(true).then((res) => {
             setInitLoading(false);
             setHistory(res);
         });
-    }, []);
+    }, [props.keyword]);
 
     const onLoadMore = () => {
         setLoading(true);

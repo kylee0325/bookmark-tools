@@ -18,5 +18,9 @@
     "loadingMore": {
         "message": "加载更多",
         "description": "Loading more message."
+    },
+    "searchPlaceholder": {
+        "message": "搜索",
+        "description": "Search placeholder message."
     }
 }
